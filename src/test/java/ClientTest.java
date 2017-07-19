@@ -31,7 +31,7 @@ public class ClientTest {
 
   @Test
   public void clear_emptiesAllClientsFromArrayList_0() {
-    Client testClient = new Client("Joel", "blah blah", 1);
+    Client testClient = new Client("Joel", "blah blah", 0);
     assertEquals(Client.all().size(), 0);
   }
 
@@ -88,7 +88,7 @@ public class ClientTest {
     Client testClient = new Client("Joel", "blah blah", 1);
     testClient.save();
     testClient.update("Tammy");
-    assertEquals("Tammy", Client.find(testClient.getId()).getDetails());
+    assertEquals("Tammy", Client.find(testClient.getId()).getName());
   }
 
   @Test
